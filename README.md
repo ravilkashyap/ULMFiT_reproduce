@@ -3,8 +3,8 @@
 Dataset: imdb, trec-6, ag, yelp-bi, yelp-full, dbpedia
 
 1. Convert each dataset into csv file: tran.csv & val.csv
-  - classification path: has info to create sentiment analysis model (label & data)
-  - language model path: has info to create language model (no labels)
+    - classification path: has info to create sentiment analysis model (label & data)
+    - language model path: has info to create language model (no labels)
 
 2. Tokenize train.csv & val.csv
   - tok_trn.npy & tok_val.npy: 1-d array of tokenized text
