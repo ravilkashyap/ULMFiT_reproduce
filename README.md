@@ -1,5 +1,14 @@
 # ULMFiT_reproduce
 
+To reproduce the results of ULMFiT
+
+# My results
+|     | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
+|-----| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+|'fwd'| 94.3 (5.7)   | 94.3 (5.7)   | 94.3 (5.7)   | 94.3 (5.7)   | 94.3 (5.7)   | 94.3 (5.7)   |
+|'bwd'| ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   |
+|'avg'| ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   | ??.? (?.?)   |
+
 Dataset: imdb, trec-6, ag, yelp-bi, yelp-full, dbpedia
 
 1. Convert each dataset into csv file: tran.csv & val.csv
