@@ -57,7 +57,21 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
     '''
     # TODO: fill out what each dropout is for
     drops = np.array([0.25, 0.1, 0.2, 0.02, 0.15])*0.5
-    learner,crit = get_learner(drops, 15000, sampled, md, em_sz, nh, nl, opt_fn, tprs)
+
+    ''' learner: RNN_Learner(Learner) object which wraps model data & nn.Module
+                 (Combines ModelData object with nn.Module object - so I can train that module)
+    
+        crit: CrossEntropyDecoder(nn.Module) (not used as learner has this as attribute)
+    '''
+    learner,crit = get_learner(drops,    # 5 dropouts
+                               15000,    # ?
+                               sampled,  # ?
+                               md,       # model data
+                               em_sz,    # embedding size
+                               nh,       # hidden layers size
+                               nl,       # num hidden layers
+                               opt_fn,   # Adam optimizer
+                               tprs)     # nomalized word counts as array
     wd=1e-7
     learner.metrics = [accuracy]
 

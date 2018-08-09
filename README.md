@@ -4,7 +4,7 @@ To reproduce the results of ULMFiT & customize fastai framework
 
 # TODOs
 1. download wiki103 dataset `sh prepare_wiki.sh`
-2. inspect pretrain.py
+2. inspect pretrain_lm.py
 3. train language model on wikitext-103
 4. download pretrained LM on wikitext-103 author provided
 5. compare perplexity between two LMs
@@ -38,7 +38,7 @@ Dataset: imdb, trec-6, ag, yelp-bi, yelp-full, dbpedia
         (trn_ids[0]: '40 41 42 39 279 320 13 22 2 835 74 4 10 ...')
       - itos.pkl: mapping between token id & token text
   
-4. We have pretrained LM on Wikitext-103
+4. If we have pretrained LM on Wikitext-103
       - Train imdb LM which starts with the weights of the pretrained LM on Wikitext-103
       - imdb LM must have the same embedding size, # hidden layers as pretrained LM's
       - Map imdb vocabulary to wikitext-103 vocabulary
