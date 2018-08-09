@@ -164,7 +164,7 @@ class ConvLearner(Learner):
 
     def get_activations(self, force=False):
         tmpl = f'_{self.models.name}_{self.data.sz}.bc'
-        # TODO: Somehow check that directory names haven't changed (e.g. added test set)
+        # TODO_bak: Somehow check that directory names haven't changed (e.g. added test set)
         names = [os.path.join(self.tmp_path, p+tmpl) for p in ('x_act', 'x_act_val', 'x_act_test')]
         if os.path.exists(names[0]) and not force:
             self.activations = [bcolz.open(p) for p in names]

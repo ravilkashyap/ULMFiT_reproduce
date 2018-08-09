@@ -13,7 +13,7 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
         print('CUDA not available. Setting device=-1.')
         cuda_id = -1
     torch.cuda.set_device(cuda_id)
-    PRE  = 'bwd_' if backwards else 'fwd_'
+    PRE = 'bwd_' if backwards else 'fwd_'
     IDS = 'ids'
     p = Path(dir_path)
     assert p.exists(), f'Error: {p} does not exist.'
@@ -27,6 +27,11 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
     else:
         trn_lm = np.load(p / f'tmp/trn_{IDS}.npy')
         val_lm = np.load(p / f'tmp/val_{IDS}.npy')
+
+    ''' trn_lm, val_lm: numericalized datasets
+            i.e. trn_lm[0]: [13, 2, 236, ..., 234]  - [I, sent, a, ..., blah]
+                 val_lm[0]: [1]                     - [True]
+    '''
     trn_lm = np.concatenate(trn_lm)
     val_lm = np.concatenate(val_lm)
 
@@ -35,9 +40,22 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
 
     trn_dl = LanguageModelLoader(trn_lm, bs, bptt)
     val_dl = LanguageModelLoader(val_lm, bs//5 if sampled else bs, bptt)
+
+    ''' md: model data that stores
+            path, pad_idx(?), num tokens, 
+            trn data loader, val data loader, 
+            batch size, bptt size
+    '''
     md = LanguageModelData(p, 1, vs, trn_dl, val_dl, bs=bs, bptt=bptt)
 
+    ''' tprs: normalized word counts as array 
+            [323, 23, ..., 12] -> [0.54, 0.12, ..., 0.053]
+    '''
     tprs = get_prs(trn_lm, vs)
+
+    ''' drops: dropouts for... 
+    '''
+    # TODO: fill out what each dropout is for
     drops = np.array([0.25, 0.1, 0.2, 0.02, 0.15])*0.5
     learner,crit = get_learner(drops, 15000, sampled, md, em_sz, nh, nl, opt_fn, tprs)
     wd=1e-7

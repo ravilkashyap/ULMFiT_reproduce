@@ -15,10 +15,19 @@ def resample_vocab(itos, trn, val, sz):
     stoi3 = collections.defaultdict(lambda:0, {v:k for k,v in enumerate(itos3)})
     return trn,val,itos3,stoi3
 
-
+'''
+    c: numericalized datasets
+    nt: vocab size
+'''
+# TODO: verify code below if comments are right
 def get_prs(c, nt):
+    # Counter({'bag': 323, 'apple': 23, ..., 'car': 12})
     uni_counter = Counter(c)
+
+    # uni_counts: word counts as array [323, 23, ..., 12]
     uni_counts = np.array([uni_counter[o] for o in range(nt)])
+
+    # normalize all the counts so they sum to one
     return uni_counts/uni_counts.sum()
 
 class LinearDecoder(nn.Module):
@@ -39,14 +48,6 @@ class LinearDecoder(nn.Module):
             decoded = self.decoder(output)
             output = decoded.view(-1, decoded.size(1))
         return output, raw_outputs, outputs
-
-
-def get_language_model(n_tok, em_sz, nhid, nlayers, pad_token, decode_train=True, dropouts=None):
-    if dropouts is None: dropouts = [0.5,0.4,0.5,0.05,0.3]
-    rnn_enc = RNN_Encoder(n_tok, em_sz, n_hid=nhid, n_layers=nlayers, pad_token=pad_token,
-                 dropouti=dropouts[0], wdrop=dropouts[2], dropoute=dropouts[3], dropouth=dropouts[4])
-    rnn_dec = LinearDecoder(n_tok, em_sz, dropouts[1], decode_train=decode_train, tie_encoder=rnn_enc.encoder)
-    return SequentialRNN(rnn_enc, rnn_dec)
 
 
 def pt_sample(pr, ns):
@@ -82,8 +83,20 @@ class CrossEntDecoder(nn.Module):
             else: input = self.decoder(input)
         return F.cross_entropy(input, target)
 
+
+def get_language_model(n_tok, em_sz, nhid, nlayers, pad_token, decode_train=True, dropouts=None):
+    if dropouts is None: dropouts = [0.5,0.4,0.5,0.05,0.3]
+    rnn_enc = RNN_Encoder(n_tok, em_sz, n_hid=nhid, n_layers=nlayers, pad_token=pad_token,
+                 dropouti=dropouts[0], wdrop=dropouts[2], dropoute=dropouts[3], dropouth=dropouts[4])
+    rnn_dec = LinearDecoder(n_tok, em_sz, dropouts[1], decode_train=decode_train, tie_encoder=rnn_enc.encoder)
+    return SequentialRNN(rnn_enc, rnn_dec)
+
+
 def get_learner(drops, n_neg, sampled, md, em_sz, nh, nl, opt_fn, prs):
+    # get_language_model returns nn.Module
     m = to_gpu(get_language_model(md.n_tok, em_sz, nh, nl, md.pad_idx, decode_train=False, dropouts=drops))
+
+    # get decoder (with cross entropy loss)
     crit = CrossEntDecoder(prs, m[1].decoder, n_neg=n_neg, sampled=sampled).cuda()
     learner = RNN_Learner(md, LanguageModel(m), opt_fn=opt_fn)
     crit.dw = learner.model[0].encoder.weight

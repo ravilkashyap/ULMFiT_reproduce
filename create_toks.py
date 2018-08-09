@@ -45,7 +45,7 @@ def create_toks(dir_path, chunksize=24000, n_lbls=1, lang='en'):
     try:
         spacy.load(lang)
     except OSError:
-        # TODO handle tokenization of Chinese, Japanese, Korean
+        # TODO_bak handle tokenization of Chinese, Japanese, Korean
         print(f'spacy tokenization model is not installed for {lang}.')
         lang = lang if lang in ['en', 'de', 'es', 'pt', 'fr', 'it', 'nl'] else 'xx'
         print(f'Command: python -m spacy download {lang}')

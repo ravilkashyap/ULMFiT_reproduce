@@ -1,20 +1,25 @@
 # ULMFiT_reproduce
 
-To reproduce the results of ULMFiT
+To reproduce the results of ULMFiT & customize fastai framework
+
+# TODOs
+1. download wiki103 dataset `sh prepare_wiki.sh`
+2. inspect pretrain.py
+3. train language model on wikitext-103
+4. download pretrained LM on wikitext-103 author provided
+5. compare perplexity between two LMs
 
 # Author's results:
-|     | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
-|-----| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|`avg`| 95.4 (4.6)   | 96.4 (3.6)   | 94.99 (5.01) | 97.84 (2.16) | 70.02 (29.98)| 99.2 (0.80)  |
+|       | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
+|-------| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+|`bidir`| 95.4 (4.6)   | 96.4 (3.6)   | 94.99 (5.01) | 97.84 (2.16) | 70.02 (29.98)| 99.2 (0.80)  |
 
 # My results:
-    - ....: tuning in progress
-    - ??.?: to be tuned
-|     | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
-|-----| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-|`fwd`| 94.35 (5.65) | 96.8  (3.2)  | 94.2 z (5.8)  | 97.61 (2.39) | ??.?  (?.?)  | 99.02 (1.08) |
-|`bwd`| ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  |
-|`avg`| ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  |
+    - bidir accuracy: avg of bwd & fwd
+|       | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
+|-------| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| `fwd` | 94.35 (5.65) | 96.8  (3.2)  | 94.2  (5.8)  | 97.61 (2.39) | ??.?  (?.?)  | 99.02 (1.08) |
+|`bidir`| ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  |
 
 Dataset: imdb, trec-6, ag, yelp-bi, yelp-full, dbpedia
 
