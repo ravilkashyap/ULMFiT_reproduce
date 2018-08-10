@@ -3,11 +3,21 @@
 To reproduce the results of ULMFiT & customize fastai framework
 
 # TODOs
-1. download wiki103 dataset `sh prepare_wiki.sh`
-2. inspect pretrain_lm.py
+~~1. download wiki103 dataset `sh prepare_wiki.sh`~~
+~~2. tokenize & numericalize wiki103 dataset~~
 3. train language model on wikitext-103
 4. download pretrained LM on wikitext-103 author provided
 5. compare perplexity between two LMs
+
+1. inspect pretrain_lm.py
+    - inspect & reproduce network architecture only
+    - implement .load(), .save(), ...
+    - implement .fit()
+2. reproduce the network from scratch
+3. get perplexities for 3 versions of the LM
+    - my version
+    - downloaded pretrained version
+    - one that's trained from scratch
 
 # Author's results:
 |       | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |

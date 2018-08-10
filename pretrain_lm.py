@@ -64,8 +64,8 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
         crit: CrossEntropyDecoder(nn.Module) (not used as learner has this as attribute)
     '''
     learner,crit = get_learner(drops,    # 5 dropouts
-                               15000,    # ?
-                               sampled,  # ?
+                               15000,    # ? used in decoder
+                               sampled,  # ? True: used in decoder
                                md,       # model data
                                em_sz,    # embedding size
                                nh,       # hidden layers size

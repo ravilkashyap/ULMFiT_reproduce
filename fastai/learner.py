@@ -26,7 +26,7 @@ class Learner():
         tmp_name(str): output name of the directory containing temporary files from training process
         models_name(str): output name of the directory containing the trained model
         metrics(list): array of functions for evaluating a desired metric. Eg. accuracy.
-        clip(float): gradient clip chosen to limit the change in the gradient to prevent exploding gradients Eg. .3
+        clip(float): gradient clip chosen to   the change in the gradient to prevent exploding gradients Eg. .3
         """
         self.data_,self.models,self.metrics = data,models,metrics
         self.sched=None

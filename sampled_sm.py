@@ -49,7 +49,11 @@ class LinearDecoder(nn.Module):
             output = decoded.view(-1, decoded.size(1))
         return output, raw_outputs, outputs
 
-
+''' 
+    pr: normalized word counts as array
+    ns: n_neg (=15000)
+'''
+# TODO: inspect
 def pt_sample(pr, ns):
     w = -torch.log(cuda.FloatTensor(len(pr)).uniform_())/(pr+1e-10)
     return torch.topk(w, ns, largest=False)[1]
