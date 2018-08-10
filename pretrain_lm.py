@@ -44,7 +44,7 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
     ''' md: model data that stores
             path, pad_idx(?), num tokens, 
             trn data loader, val data loader, 
-            batch size, bptt size
+            batch size, bptt size 
     '''
     md = LanguageModelData(p, 1, vs, trn_dl, val_dl, bs=bs, bptt=bptt)
 
