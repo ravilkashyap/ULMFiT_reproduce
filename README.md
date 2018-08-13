@@ -2,24 +2,13 @@
 
 To reproduce the results of ULMFiT & customize fastai framework
 
-# TODOs
-1. download wiki103 dataset `sh prepare_wiki.sh` -- done 
-2. tokenize & numericalize wiki103 dataset       -- done
-3. train language model on wikitext-103          -- in progress...
-4. download pretrained LM on wikitext-103        -- done
-5. create ASGD version of LM 
-4. code perplexity
-5. compare perplexity between two LMs            
-
-1. inspect pretrain_lm.py
-    - inspect & reproduce network architecture only
-    - implement .load(), .save(), ...
-    - implement .fit()
-2. reproduce the network from scratch
-3. get perplexities for 3 versions of the LM
-    - my version
-    - downloaded pretrained version
-    - one that's trained from scratch
+# Perplexities on Wikitext-103 validation dataset (all LM trained on Wikitext-103 training set)
+1. Pretrained LM (download): 24.375
+    - vocab_size: 238462
+2. LM I trained with Adam: 13.671
+    - vocab_size: 30002
+3. LM I trained with SGD: ??.???
+    - vocab_size: 30002
 
 # Author's results:
 |       | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |

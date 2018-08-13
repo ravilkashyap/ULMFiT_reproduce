@@ -19,7 +19,9 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
     assert p.exists(), f'Error: {p} does not exist.'
     bptt=70
     em_sz,nh,nl = 400,1150,3
-    opt_fn = partial(optim.Adam, betas=(0.8, 0.99))
+    opt_fn = partial(optim.SGD)
+    print('opt_fn: SGD')
+    #opt_fn = partial(optim.Adam, betas=(0.8, 0.99))
 
     if backwards:
         trn_lm = np.load(p / f'tmp/trn_{IDS}_bwd.npy')
@@ -64,7 +66,8 @@ def train_lm(dir_path, cuda_id, cl=1, bs=64, backwards=False, lr=3e-4, sampled=T
         crit: CrossEntropyDecoder(nn.Module) (not used as learner has this as attribute)
     '''
     learner,crit = get_learner(drops,    # 5 dropouts
-                               15000,    # ? used in decoder
+                               #15000,    # ? used in decoder
+                               1000,    # ? used in decoder
                                sampled,  # ? True: used in decoder
                                md,       # model data
                                em_sz,    # embedding size

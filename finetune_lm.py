@@ -30,7 +30,9 @@ class EarlyStopping(Callback):
         print(f'Loading best model from {self.save_path}')
         self.learner.load(self.save_path)
 
-
+''' 
+    python finetune_lm.py data/imdb data/wt103 1 25 --lm-id pretrain_wt103
+'''
 def train_lm(dir_path, pretrain_path, cuda_id=0, cl=25, pretrain_id='wt103', lm_id='', bs=64,
              dropmult=1.0, backwards=False, lr=4e-3, preload=True, bpe=False, startat=0,
              use_clr=True, use_regular_schedule=False, use_discriminative=True, notrain=False, joined=False,

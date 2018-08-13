@@ -86,7 +86,7 @@ def set_train_mode(m):
     else: m.train()
 
 def fit(model, data, n_epochs, opt, crit, metrics=None, callbacks=None, stepper=Stepper,
-        swa_model=None, swa_start=None, swa_eval_freq=None, visualize=False, **kwargs):
+        swa_model=None, swa_start=None, swa_eval_freq=None, visualize=True, **kwargs):
     """ Fits a model
 
     Arguments:
@@ -108,7 +108,7 @@ def fit(model, data, n_epochs, opt, crit, metrics=None, callbacks=None, stepper=
     avg_mom=0.98
     batch_num,avg_loss=0,0.
     for cb in callbacks: cb.on_train_begin()
-    names = ["epoch", "trn_loss", "val_loss"] + [f.__name__ for f in metrics]
+    names = ["epoch", "trn_loss", "val_loss", "perplexity"] + [f.__name__ for f in metrics]
     if swa_model is not None:
         swa_names = ['swa_loss'] + [f'swa_{f.__name__}' for f in metrics]
         names += swa_names
@@ -238,7 +238,8 @@ def validate(stepper, dl, metrics, epoch, seq_first=False, validate_skip = 0):
             batch_cnts.append(batch_sz(x, seq_first=seq_first))
             loss.append(to_np(l))
             res.append([f(datafy(preds), datafy(y)) for f in metrics])
-    return [np.average(loss, 0, weights=batch_cnts)] + list(np.average(np.stack(res), 0, weights=batch_cnts))
+    final_cel = np.average(loss, 0, weights=batch_cnts)
+    return [final_cel, (2 ** final_cel), (np.average(np.stack(res), 0, weights=batch_cnts))]
 
 def get_prediction(x):
     if is_listy(x): x=x[0]
