@@ -37,11 +37,11 @@ def measure_ppxt(cuda_id=0):
     # Validation dataset path (idx)
     # pretrained: trn_ids_path = 'data/pretrained/val_ids.npy'
     # pretrained: val_ids_path = 'data/pretrained/val_ids.npy'
-    trn_ids_path = 'data/wiki/en/tmp/val_ids.npy'
-    val_ids_path = 'data/wiki/en/tmp/val_ids.npy'
+    trn_ids_path = 'data/wiki-sgd/en/tmp/val_ids.npy'
+    val_ids_path = 'data/wiki-sgd/en/tmp/val_ids.npy'
 
     # int -> string vocabulary path (do not use tmp/itos_wt103.pkl; it doesn't match with val_ids.npy)
-    itos_path = 'data/wiki/en/tmp/itos.pkl'
+    itos_path = 'data/wiki-sgd/en/tmp/itos.pkl'
 
     trn_ids = np.load(trn_ids_path)
     trn_ids = np.concatenate(trn_ids)
@@ -69,7 +69,7 @@ def measure_ppxt(cuda_id=0):
 
     trn_dl = LanguageModelLoader(trn_ids, bs, bptt)
     val_dl = LanguageModelLoader(val_ids, bs, bptt)
-    md = LanguageModelData('data/wiki/en/', 1, vocab_size, trn_dl, val_dl, bs=bs, bptt=bptt)
+    md = LanguageModelData('data/wiki-sgd/en/', 1, vocab_size, trn_dl, val_dl, bs=bs, bptt=bptt)
 
     learner = md.get_model(opt_fn, em_sz, nh, nl,
         dropouti=drops[0], dropout=drops[1], wdrop=drops[2], dropoute=drops[3], dropouth=drops[4])
@@ -79,14 +79,14 @@ def measure_ppxt(cuda_id=0):
     wd=1e-7
 
     # pretrained: wgts = torch.load('data/pretrained/models/fwd_wt103.h5', map_location=lambda storage, loc: storage)
-    wgts = torch.load('data/wiki/en/models/fwd_.h5', map_location=lambda storage, loc: storage)
+    wgts = torch.load('data/wiki-sgd/en/models/fwd_.h5', map_location=lambda storage, loc: storage)
 
     print(f'Loading pretrained weights...')
     ew = to_np(wgts['0.encoder.weight'])
     row_m = ew.mean(0)
 
     # pretrained: itos2 = pickle.load(open('data/pretrained/tmp/itos_wt103.pkl', 'rb'))
-    itos2 = pickle.load(open('data/wiki/en/tmp/itos.pkl', 'rb'))
+    itos2 = pickle.load(open('data/wiki-sgd/en/tmp/itos.pkl', 'rb'))
     stoi2 = collections.defaultdict(lambda: -1, {v: k for k, v in enumerate(itos2)})
     nw = np.zeros((vocab_size, em_sz), dtype=np.float32)
     nb = np.zeros((vocab_size,), dtype=np.float32)

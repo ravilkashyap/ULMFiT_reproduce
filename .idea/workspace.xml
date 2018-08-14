@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36fecfec-dd77-46fd-a4a9-d01941fbdadd" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/measure_ppxt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pretrain_lm_reload.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fastai/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastai/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/finetune_lm.py" beforeDir="false" afterPath="$PROJECT_DIR$/finetune_lm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pretrain_lm.py" beforeDir="false" afterPath="$PROJECT_DIR$/pretrain_lm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/measure_ppxt.py" beforeDir="false" afterPath="$PROJECT_DIR$/measure_ppxt.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +17,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.47401717">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
@@ -32,15 +29,51 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="finetune_lm.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/finetune_lm.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="36" selection-end-column="74" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pretrain_lm.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pretrain_lm.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="measure_ppxt.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="measure_ppxt.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/measure_ppxt.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-662">
-                  <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+                <state relative-caret-position="898">
+                  <caret line="130" column="25" lean-forward="true" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#11#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pretrain_lm_reload.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pretrain_lm_reload.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="193">
+                  <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -66,7 +99,6 @@
       <find>n_neg</find>
       <find>sampled</find>
       <find>encoder_with_dropout</find>
-      <find>accuracy</find>
       <find>.fit(</find>
       <find>trn_loss</find>
       <find>names</find>
@@ -89,6 +121,7 @@
       <find>cuda</find>
       <find>64</find>
       <find>lm_path</find>
+      <find>accuracy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -111,14 +144,15 @@
         <option value="$PROJECT_DIR$/finetune_lm.py" />
         <option value="$PROJECT_DIR$/fastai/text.py" />
         <option value="$PROJECT_DIR$/measure_ppl.py" />
-        <option value="$PROJECT_DIR$/measure_ppxt.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/measure_ppxt.py" />
+        <option value="$PROJECT_DIR$/pretrain_lm_reload.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="53" />
-    <option name="y" value="-4" />
+    <option name="y" value="-1444" />
     <option name="width" value="2507" />
     <option name="height" value="1444" />
   </component>
@@ -148,24 +182,6 @@
               <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
               <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrained" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrained" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -173,7 +189,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/pytorch_tutorial" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/UODL-py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -279,7 +295,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="-4" width="2507" height="1444" extended-state="6" />
+    <frame x="53" y="-1444" width="2507" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.109098226" />
@@ -371,13 +387,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fastai/text.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/predict_with_classifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1740">
@@ -442,6 +451,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -459,6 +471,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -581,6 +596,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -639,16 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finetune_lm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="145" column="19" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fastai/core.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -660,16 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="706">
           <caret line="210" column="54" selection-start-line="210" selection-start-column="51" selection-end-line="210" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pretrain_lm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -728,16 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/measure_ppxt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-662">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -745,6 +733,46 @@
             <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/measure_ppxt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="898">
+          <caret line="130" column="25" lean-forward="true" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pretrain_lm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pretrain_lm_reload.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finetune_lm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="36" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
