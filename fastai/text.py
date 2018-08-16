@@ -160,6 +160,8 @@ class LanguageModelLoader():
 
     def __iter__(self):
         self.i,self.iter = 0,0
+        blah = len(self)
+
         while self.i < self.n-1 and self.iter<len(self):
             if self.i == 0:
                 seq_len = self.bptt + 5 * 5

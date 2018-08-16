@@ -77,7 +77,8 @@ def train_lm(dir_path, pretrain_path, cuda_id=0, cl=25, pretrain_id='wt103', lm_
     print(f'Loading {trn_lm_path} and {val_lm_path}')
     trn_lm = np.load(trn_lm_path)
     trn_lm = np.concatenate(trn_lm)
-    val_lm = np.load(val_lm_path)
+    val_lm = np.load(val_lm_path) * 2  # trec-6
+    #val_lm = np.load(val_lm_path)  # other than trec-6
     val_lm = np.concatenate(val_lm)
 
     if bpe:

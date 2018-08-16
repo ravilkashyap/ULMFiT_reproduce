@@ -21,11 +21,17 @@ To reproduce the results of ULMFiT & customize fastai framework
 |`bidir`| 95.4 (4.6)   | 96.4 (3.6)   | 94.99 (5.01) | 97.84 (2.16) | 70.02 (29.98)| 99.2 (0.80)  |
 
 # My results:
-    - bidir accuracy: avg of bwd & fwd
+    - Fine-tuned with pretrained LM on wikitext-103
+    - bidir accuracy: avg of bwd & fwd (requires implementation)
 |       | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
 |-------| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
 | `fwd` | 94.35 (5.65) | 96.8  (3.2)  | 94.2  (5.8)  | 97.61 (2.39) | ??.?  (?.?)  | 99.02 (1.08) |
 |`bidir`| ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  | ??.?  (?.?)  |
+
+    - Fine-tuned with (i trained) LM on wikitext-103
+|       | IMDb         | TREC-6 (6i)  | AG           | Yelp-bi      | Yelp-full    | DBpedia      |
+|-------| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| `fwd` | --.-- (-.--) | 97.0  (3.0)  | ??.?  (?.?)  | ??.?? (?.??) | ??.?  (?.?)  | ??.?? (?.??) |
 
 Dataset: imdb, trec-6, ag, yelp-bi, yelp-full, dbpedia
 
