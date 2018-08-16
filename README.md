@@ -2,13 +2,18 @@
 
 To reproduce the results of ULMFiT & customize fastai framework
 
-# Perplexities on Wikitext-103 validation dataset (all LM trained on Wikitext-103 training set)
+# Perplexities on Wikitext-103 validation dataset 
+- All LM trained on Wikitext-103 training set
 1. Pretrained LM (download): 24.375
     - vocab_size: 238462
+    - ?? epoches
 2. LM I trained with Adam: 13.671
     - vocab_size: 30002
-3. LM I trained with SGD: ??.???
+    - 12 epoches
+3. LM I trained with SGD: 361.78
     - vocab_size: 30002
+    - Very slow convergence 
+    - 24 epoches
 
 # Author's results:
 |       | IMDb         | TREC-6       | AG           | Yelp-bi      | Yelp-full    | DBpedia      |

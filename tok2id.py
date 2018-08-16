@@ -2,7 +2,7 @@ from fastai.text import *
 import fire
 
 
-def tok2id(dir_path, max_vocab=30000, min_freq=1):
+def tok2id(dir_path, max_vocab=238460, min_freq=1):
     print(f'dir_path {dir_path} max_vocab {max_vocab} min_freq {min_freq}')
     p = Path(dir_path)
     assert p.exists(), f'Error: {p} does not exist.'
