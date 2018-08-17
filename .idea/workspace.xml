@@ -4,8 +4,8 @@
     <list default="true" id="36fecfec-dd77-46fd-a4a9-d01941fbdadd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fastai/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastai/text.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/finetune_lm.py" beforeDir="false" afterPath="$PROJECT_DIR$/finetune_lm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lr_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/lr_plot.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,8 +22,8 @@
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="465">
-                    <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+                  <first_editor relative-caret-position="420">
+                    <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -33,11 +33,20 @@
           <file leaf-file-name="finetune_lm.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/finetune_lm.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1125">
-                  <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+                <state relative-caret-position="574">
+                  <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="train_clas.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/train_clas.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
                 </state>
               </provider>
             </entry>
@@ -85,8 +94,8 @@
           <file leaf-file-name="model.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/fastai/model.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="264">
-                  <caret line="234" selection-start-line="234" selection-end-line="234" />
+                <state relative-caret-position="564">
+                  <caret line="254" column="19" selection-start-line="254" selection-start-column="19" selection-end-line="254" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -192,10 +201,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="52" />
-    <option name="y" value="-11" />
-    <option name="width" value="2509" />
-    <option name="height" value="1452" />
+    <option name="x" value="53" />
+    <option name="y" value="-4" />
+    <option name="width" value="2507" />
+    <option name="height" value="1444" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -211,46 +220,6 @@
             <path>
               <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
               <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="pretrained" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="wiki" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="wiki" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="wiki" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ULMFiT_reproduce" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="wiki" type="462c0819:PsiDirectoryNode" />
-              <item name="en" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ULMFiT_reproduce" type="b2602c69:ProjectViewProjectNode" />
@@ -274,7 +243,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/UODL-py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -380,19 +349,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="52" y="-11" width="2509" height="1452" extended-state="6" />
+    <frame x="53" y="-4" width="2507" height="1444" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1594203" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1594203" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32977912" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32901752" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32977912" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.32901752" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32901752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.26580352" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.35643566" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -589,13 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train_clas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="96" column="50" selection-start-line="96" selection-start-column="50" selection-end-line="96" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fastai/fp16.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -765,26 +727,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fastai/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="234" selection-start-line="234" selection-end-line="234" />
+        <state relative-caret-position="564">
+          <caret line="254" column="19" selection-start-line="254" selection-start-column="19" selection-end-line="254" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finetune_lm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="77" column="33" selection-start-line="77" selection-start-column="33" selection-end-line="77" selection-end-column="33" />
+        <state relative-caret-position="574">
+          <caret line="87" column="22" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="22" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/train_clas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="105" column="42" lean-forward="true" selection-start-line="105" selection-start-column="42" selection-end-line="105" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="465">
-            <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <first_editor relative-caret-position="420">
+            <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
